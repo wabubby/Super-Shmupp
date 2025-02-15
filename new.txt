@@ -15,12 +15,10 @@ public class PhysicsController : RaycastController {
         cInfo.faceDirection.x = Mathf.Sign(velocity.x);
         cInfo.faceDirection.y = Mathf.Sign(velocity.y);
 
-        deltaS = velocity*Time.deltaTime;
 
+        deltaS = velocity * Time.deltaTime;
         VerticalCollision();
-        HorizontalCollision();
 
-        velocity = deltaS/Time.deltaTime;
         transform.position += (Vector3) deltaS;
     }
 
@@ -32,17 +30,16 @@ public class PhysicsController : RaycastController {
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLengthY, Mask);
 
             if (hit) {
+                // the actual velocity must be converted BACK.
                 deltaS.y = -(hit.distance-skinWidth);
             }
 
             Debug.DrawRay(rayOrigin, Vector2.down*rayLengthY, Color.red);
         }
     }
-    
     private void HorizontalCollision() {
 
     }
-
     public void LateUpdate() { Move(); }
 
     public struct CollisionInfo{
