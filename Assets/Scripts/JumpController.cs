@@ -73,19 +73,9 @@ public class JumpController : MonoBehaviour
 
     void Dive(){
 
-        if (isGround){
-            isInDive = false;
-        }
-
-        if (!isGround && isInDive){
-            canDive = false;;
-        }
-
-        else {
-            canDive = true;
-        }
+        if (isGround) { isInDive = false; }
         
-        if (Input.GetKey(KeyCode.LeftShift) && canDive){
+        if (Input.GetKey(KeyCode.LeftShift) && !isInDive){
             isInDive = true;
             physics.velocity.y = diveSpeedY;
             physics.velocity.x = lastFacing*diveSpeedX;
