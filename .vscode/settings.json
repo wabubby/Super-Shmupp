@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Super-Shmupp.sln"
+    "dotnet.defaultSolution": "Super-Shmupp.sln",
+    "dotnet.preferCSharpExtension": true
 }
