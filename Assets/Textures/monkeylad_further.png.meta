@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 3a8cfe3fbb0220b4c973a4075fe0a5e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5396743096456139633
+    second: monkeylad_further_0
+  - first:
+      213: 3437089085549991856
+    second: monkeylad_further_1
+  - first:
+      213: -1414141398005557628
+    second: monkeylad_further_2
+  - first:
+      213: 3678218842936642755
+    second: monkeylad_further_3
+  - first:
+      213: 6388604437332322970
+    second: monkeylad_further_4
+  - first:
+      213: 1305470088654913489
+    second: monkeylad_further_5
+  - first:
+      213: -7889879297885775642
+    second: monkeylad_further_6
+  - first:
+      213: 6618137650432959830
+    second: monkeylad_further_7
+  - first:
+      213: -1382371653045818993
+    second: monkeylad_further_8
+  - first:
+      213: -4146424618891277075
+    second: monkeylad_further_9
+  - first:
+      213: 6767872593662600197
+    second: monkeylad_further_10
+  - first:
+      213: -34773490448487487
+    second: monkeylad_further_11
+  - first:
+      213: -994919804728958748
+    second: monkeylad_further_12
+  - first:
+      213: 1402373646583875427
+    second: monkeylad_further_13
+  - first:
+      213: 8961792255149379427
+    second: monkeylad_further_14
+  - first:
+      213: -4284759074956293141
+    second: monkeylad_further_15
+  - first:
+      213: -1519294178765519468
+    second: monkeylad_further_16
+  - first:
+      213: 8225067440596638881
+    second: monkeylad_further_17
+  - first:
+      213: 5601963176109602263
+    second: monkeylad_further_18
+  - first:
+      213: 3941279101187628374
+    second: monkeylad_further_19
+  - first:
+      213: 2345931890381357933
+    second: monkeylad_further_20
+  - first:
+      213: 6690602311123930833
+    second: monkeylad_further_21
+  - first:
+      213: -2402529513482360685
+    second: monkeylad_further_22
+  - first:
+      213: 2487944616285424721
+    second: monkeylad_further_23
+  - first:
+      213: 6584356095258147167
+    second: monkeylad_further_24
+  - first:
+      213: 1803465954166119630
+    second: monkeylad_further_25
+  - first:
+      213: 93700734562964855
+    second: monkeylad_further_26
+  - first:
+      213: 5410686299461088363
+    second: monkeylad_further_27
+  - first:
+      213: -2845036658076699421
+    second: monkeylad_further_28
+  - first:
+      213: -2532616760419898249
+    second: monkeylad_further_29
+  - first:
+      213: -887076027074535660
+    second: monkeylad_further_30
+  - first:
+      213: 5486193294990390567
+    second: monkeylad_further_31
+  - first:
+      213: -8325632062232064158
+    second: monkeylad_further_32
+  - first:
+      213: 4790982064702797702
+    second: monkeylad_further_33
+  - first:
+      213: -7276425066259052887
+    second: monkeylad_further_34
+  - first:
+      213: -5724824630137362012
+    second: monkeylad_further_35
+  - first:
+      213: -3663125742824866708
+    second: monkeylad_further_36
+  - first:
+      213: 6722953386773863464
+    second: monkeylad_further_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monkeylad_further_0
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 960
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1735f48c04515ea40800000000000000
+      internalID: 5396743096456139633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 960
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43200d90d25068468661b047e05c292
+      internalID: 3437089085549991856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce074e153d8c25d4782262e2751f1444
+      internalID: 3678218842936642755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b77de1905d8ae642a5cded9942a0b93
+      internalID: -1414141398005557628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813a055481dcc3c479df17a2cf2256f9
+      internalID: 6388604437332322970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7f54222de993d43a95834584ca4e01
+      internalID: 1305470088654913489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_6
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546e6375b3eacdb4a8a2bec5f0609597
+      internalID: 1332966935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960f7d87d0dec004daa3c88d018222fa
+      internalID: 72886977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkeylad_further_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe96bf35aa81964eadcc9c8dca9a3ea
+      internalID: 581937621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 11f9c728591cae04eb8a9d3894ec51d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      monkeylad_further_0: 5396743096456139633
+      monkeylad_further_1: 3437089085549991856
+      monkeylad_further_2: -1414141398005557628
+      monkeylad_further_3: 3678218842936642755
+      monkeylad_further_4: 6388604437332322970
+      monkeylad_further_5: 1305470088654913489
+      monkeylad_further_6: 1332966935
+      monkeylad_further_7: 72886977
+      monkeylad_further_8: 581937621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
