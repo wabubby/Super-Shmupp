@@ -339,12 +339,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292679553}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1660619881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &292679557
 MonoBehaviour:
@@ -792,7 +792,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 292679556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1660619883
@@ -828,6 +829,12 @@ MonoBehaviour:
   Mask:
     serializedVersion: 2
     m_Bits: 64
+  cInfo:
+    up: 0
+    down: 0
+    left: 0
+    right: 0
+    faceDirection: {x: 0, y: 0}
 --- !u!114 &1660619885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,6 +853,7 @@ MonoBehaviour:
   DiveHeight: 1
   DiveApexTime: 0.12
   diveSpeedX: 15
+  jumpBuffThreshold: 0.15
   isInDive: 0
 --- !u!1 &1697949282
 GameObject:
@@ -985,7 +993,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 292679556}
   - {fileID: 1660619881}
   - {fileID: 1464666344}
   - {fileID: 419620666}

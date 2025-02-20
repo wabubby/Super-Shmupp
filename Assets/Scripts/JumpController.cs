@@ -1,6 +1,3 @@
-using NUnit.Framework;
-using Unity.VisualScripting;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(PhysicsController),typeof(MovementController))]
@@ -8,28 +5,52 @@ using UnityEngine.InputSystem;
 
 public class JumpController : MonoBehaviour
 {
-    //Config
-    [SerializeField] float ApexTime, JumpHeight, TerminalVelocity, DiveHeight, DiveApexTime, diveSpeedX;
 
+    // private fields and methods should be CAMELCASE!!!
+
+    //Config
+    [SerializeField] float apexTime = 0.2f;
+    [SerializeField] float JumpHeight = 3f;
+    [SerializeField] float TerminalVelocity = 28f;
+    [SerializeField] float DiveHeight = 1f;
+    [SerializeField] float DiveApexTime = 0.12f;
+    [SerializeField] float diveSpeedX = 15f;
+    [SerializeField] float jumpBuffThreshold = 0.15f;
+
+    //idfk what the shit this is
+    PhysicsController physics;
+    MovementController move;
 
     //Control
     float jumpSpeed; 
     float gravity;
     float diveGravity;
-    PhysicsController physics;
-    MovementController move;
-    bool isGround;
-    bool canDive;
-    public bool isInDive;
-    int lastFacing;
-    float diveSpeedY;
+
+    //keeping track of stuff
+        //diving
+        bool canDive;
+        public bool isInDive;
+        int lastFacing;
+        float diveSpeedY;
+        //jump buffer
+        float lastJumpInputTime;
+        bool jumpBuffered;
+
+        //Coyote
+        float lastGround;
+
+        //misc
+        bool isGround;
+        bool canJump;
+        bool airborneFromJump;
+
 
     void Start()
     {
         physics = GetComponent<PhysicsController>();
         move = GetComponent<MovementController>();
 
-        jumpSpeed = 2 * JumpHeight/ApexTime;
+        jumpSpeed = 2 * JumpHeight/apexTime;
         gravity = jumpSpeed*jumpSpeed/(2*JumpHeight);
 
         diveSpeedY = 2 * DiveHeight/DiveApexTime;
@@ -37,45 +58,68 @@ public class JumpController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        isGround = physics.cInfo.down;
-        canDive = true;
+    void Update() {
         #if UNITY_EDITOR
         Start();
         #endif
+
+        canJump = false;
+        canDive = true;
+        isGround = physics.cInfo.down;
+        jumpBuffered = false;
+
 
         if (move.InputDir.x != 0){
             lastFacing = (int)move.InputDir.x;
         }
 
-        Jump();
-        Gravitate();
-        Dive();
+        if (isGround == true){
+            lastGround = Time.time;
+            airborneFromJump = false;
+            canJump = true;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space)){
+            lastJumpInputTime = Time.time;
+        }
+        
+        float timeSinceJumpInput = Time.time - lastJumpInputTime;
+        if (timeSinceJumpInput < jumpBuffThreshold){
+            jumpBuffered = true;
+        }
 
-        physics.velocity.y = Mathf.Clamp(physics.velocity.y, -TerminalVelocity, Mathf.Infinity);
+        TryJump();
+        Gravitate();
+        TryDive();
+
+        // terminal velocity
+        if (physics.velocity.y < -TerminalVelocity) {
+            physics.velocity.y = -TerminalVelocity;
+        }
     }
 
-    void Jump(){
-        if (isGround && Input.GetKey(KeyCode.Space)){
+    void TryJump(){
+        if (isGround && Input.GetKeyDown(KeyCode.Space)){
             physics.velocity.y = jumpSpeed;
+            airborneFromJump = true;
+        }
+
+        if (jumpBuffered && isGround && canJump){
+            physics.velocity.y = jumpSpeed;
+            lastJumpInputTime = -Mathf.Infinity;
+            canJump = false;
         }
     }
 
     void Gravitate(){
-        if (!isGround && !isInDive){
-            physics.velocity.y -= gravity * Time.deltaTime;
-        }
-        if (!isGround && isInDive){
-            physics.velocity.y -= diveGravity * Time.deltaTime;
-        }
+        float g = isInDive ? diveGravity : gravity;
+        physics.velocity.y -= g * Time.deltaTime;
     }
 
-    void Dive(){
-
-        if (isGround) { isInDive = false; }
+    void TryDive(){
+        if (isGround) {isInDive = false;}
         
-        if (Input.GetKey(KeyCode.LeftShift) && !isInDive){
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isInDive){
             isInDive = true;
             physics.velocity.y = diveSpeedY;
             physics.velocity.x = lastFacing*diveSpeedX;

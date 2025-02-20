@@ -1,6 +1,9 @@
+using System;
 using UnityEngine;
 
 public class PhysicsController : RaycastController {
+
+    [Serializable]
     public struct CollisionInfo{
         public bool up, down;
         public bool left, right;
@@ -30,11 +33,14 @@ public class PhysicsController : RaycastController {
         HorizontalCollision();
 
         velocity = deltaS/Time.deltaTime;
+
         transform.position += (Vector3) deltaS;
     }
 
     private void VerticalCollision() {
-        if (cInfo.faceDirection.y <= 0)
+
+      
+        if (cInfo.faceDirection.y <= 0){
         for (int i = 0; i < rayCount; i++){
             Vector2 rayOrigin = (Vector2) transform.position + raypoints.down[i];
             float rayLengthY = Mathf.Abs(deltaS.y) + skinWidth;
@@ -48,7 +54,9 @@ public class PhysicsController : RaycastController {
 
             Debug.DrawRay(rayOrigin, Vector2.down*rayLengthY, Color.red);
         }
-        else{
+        }
+        
+        else if (cInfo.faceDirection.y < 0) {
             for (int i = 0; i < rayCount; i++){
             Vector2 rayOrigin = (Vector2) transform.position + raypoints.top[i];
             float rayLengthY = Mathf.Abs(deltaS.y) + skinWidth;
@@ -63,6 +71,8 @@ public class PhysicsController : RaycastController {
             Debug.DrawRay(rayOrigin, Vector2.up*rayLengthY, Color.red);
             }
         }
+
+
     }
     
     private void HorizontalCollision() {
