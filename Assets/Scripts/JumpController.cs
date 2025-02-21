@@ -16,6 +16,8 @@ public class JumpController : MonoBehaviour
     [SerializeField] float DiveApexTime = 0.12f;
     [SerializeField] float diveSpeedX = 15f;
     [SerializeField] float jumpBuffThreshold = 0.15f;
+    [SerializeField] float CoyoteTime = 0.1f;
+    [SerializeField] float wooofancyslowdownthing = 1f;
 
     //idfk what the shit this is
     PhysicsController physics;
@@ -62,6 +64,7 @@ public class JumpController : MonoBehaviour
         #if UNITY_EDITOR
         Start();
         #endif
+        Time.timeScale = wooofancyslowdownthing;
 
         canJump = false;
         canDive = true;
@@ -73,10 +76,16 @@ public class JumpController : MonoBehaviour
             lastFacing = (int)move.InputDir.x;
         }
 
-        if (isGround == true){
+        if (isGround){
             lastGround = Time.time;
             airborneFromJump = false;
             canJump = true;
+        }
+
+        else{
+            if (Time.time - lastGround < CoyoteTime){
+                canJump = true;
+            }
         }
         
         if (Input.GetKeyDown(KeyCode.Space)){
@@ -88,8 +97,8 @@ public class JumpController : MonoBehaviour
             jumpBuffered = true;
         }
 
-        TryJump();
         Gravitate();
+        TryJump();
         TryDive();
 
         // terminal velocity
@@ -99,15 +108,17 @@ public class JumpController : MonoBehaviour
     }
 
     void TryJump(){
-        if (isGround && Input.GetKeyDown(KeyCode.Space)){
+        if (canJump && Input.GetKeyDown(KeyCode.Space) && !airborneFromJump){
             physics.velocity.y = jumpSpeed;
             airborneFromJump = true;
+            print("jumped");
         }
 
         if (jumpBuffered && isGround && canJump){
             physics.velocity.y = jumpSpeed;
             lastJumpInputTime = -Mathf.Infinity;
             canJump = false;
+            airborneFromJump = true;
         }
     }
 
@@ -118,7 +129,7 @@ public class JumpController : MonoBehaviour
 
     void TryDive(){
         if (isGround) {isInDive = false;}
-        
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isInDive){
             isInDive = true;
             physics.velocity.y = diveSpeedY;
