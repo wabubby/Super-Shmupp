@@ -17,7 +17,6 @@ public class JumpController : MonoBehaviour
     [SerializeField] float diveSpeedX = 15f;
     [SerializeField] float jumpBuffThreshold = 0.15f;
     [SerializeField] float CoyoteTime = 0.1f;
-    [SerializeField] float wooofancyslowdownthing = 1f;
 
     //idfk what the shit this is
     PhysicsController physics;
@@ -64,7 +63,6 @@ public class JumpController : MonoBehaviour
         #if UNITY_EDITOR
         Start();
         #endif
-        Time.timeScale = wooofancyslowdownthing;
 
         canJump = false;
         canDive = true;

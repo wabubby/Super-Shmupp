@@ -37,15 +37,17 @@ public class PauseMenu : MonoBehaviour {
     public void RestartGame ()
     {
         Time.timeScale = 1;
-        Debug.Log("Restarting Game....");
+        
         //SceneManager.LoadScene("Ryan");
+        Debug.Log("Restarting Game....");
 
     }
-
+     
     public void QuitGame ()
     {
-        Debug.Log("Quitting Game..... ");
+        
         Application.Quit();
+        Debug.Log("Game is exiting");
     }
             
 }
