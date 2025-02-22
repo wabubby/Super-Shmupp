@@ -34,7 +34,9 @@ public class PhysicsController : RaycastController {
 
         velocity = deltaS/Time.deltaTime;
 
-        transform.position += (Vector3) deltaS;
+        if (Time.timeScale != 0){
+            transform.position += (Vector3) deltaS;
+        }
     }
 
     private void VerticalCollision() {

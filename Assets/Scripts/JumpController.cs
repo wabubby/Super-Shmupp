@@ -29,7 +29,6 @@ public class JumpController : MonoBehaviour
 
     //keeping track of stuff
         //diving
-        bool canDive;
         public bool isInDive;
         int lastFacing;
         float diveSpeedY;
@@ -65,10 +64,8 @@ public class JumpController : MonoBehaviour
         #endif
 
         canJump = false;
-        canDive = true;
         isGround = physics.cInfo.down;
         jumpBuffered = false;
-
 
         if (move.InputDir.x != 0){
             lastFacing = (int)move.InputDir.x;
@@ -109,7 +106,6 @@ public class JumpController : MonoBehaviour
         if (canJump && Input.GetKeyDown(KeyCode.Space) && !airborneFromJump){
             physics.velocity.y = jumpSpeed;
             airborneFromJump = true;
-            print("jumped");
         }
 
         if (jumpBuffered && isGround && canJump){

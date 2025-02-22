@@ -27,7 +27,6 @@ public class MovementController : MonoBehaviour{
 
         deltaAccel = (speed/accelTime)*Time.deltaTime;
         deltaDecel = (speed/decelTime)*Time.deltaTime;
-        print($"{deltaAccel} {deltaDecel}");
         lastInputDir = Vector2.zero;
     }
 
