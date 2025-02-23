@@ -67,6 +67,7 @@ public class JumpController : MonoBehaviour
         isGround = physics.cInfo.down;
         jumpBuffered = false;
 
+
         if (move.InputDir.x != 0){
             lastFacing = (int)move.InputDir.x;
         }

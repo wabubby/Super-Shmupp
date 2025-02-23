@@ -28,15 +28,10 @@ public class PhysicsController : RaycastController {
         cInfo.faceDirection.y = Mathf.Sign(velocity.y);
 
         deltaS = velocity*Time.deltaTime;
-
         VerticalCollision();
         HorizontalCollision();
-
         velocity = deltaS/Time.deltaTime;
-
-        if (Time.timeScale != 0){
-            transform.position += (Vector3) deltaS;
-        }
+        transform.position += (Vector3) deltaS;
     }
 
     private void VerticalCollision() {
@@ -109,7 +104,7 @@ public class PhysicsController : RaycastController {
         }
     }
 
-    public void LateUpdate() { Move(); }
+    public void LateUpdate() { if (Time.deltaTime != 0) {Move();} }
 
 
 }
