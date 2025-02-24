@@ -53,7 +53,7 @@ public class PhysicsController : RaycastController {
         }
         }
         
-        else if (cInfo.faceDirection.y < 0) {
+        else if (cInfo.faceDirection.y > 0) {
             for (int i = 0; i < rayCount; i++){
             Vector2 rayOrigin = (Vector2) transform.position + raypoints.top[i];
             float rayLengthY = Mathf.Abs(deltaS.y) + skinWidth;
