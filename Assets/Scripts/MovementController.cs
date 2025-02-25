@@ -2,6 +2,7 @@
 //using System.Numerics;
 //using System.Numerics;
 using UnityEngine;
+using UnityEngine.UIElements;
 [RequireComponent(typeof(PhysicsController), typeof(JumpController))]
 
 public class MovementController : MonoBehaviour{
@@ -32,6 +33,7 @@ public class MovementController : MonoBehaviour{
 
     void Update()
     {
+        var PlayerY = GameObject.Find("Character").transform.position.y;
         InputDir = Vector2.zero;
          //Check for key presses
         if (Input.GetKey(KeyCode.D)){
@@ -70,6 +72,12 @@ public class MovementController : MonoBehaviour{
         if (!jump.isInDive){
             physics.velocity.x = Mathf.Clamp(physics.velocity.x, -speed, speed);
         }
+
+        if (PlayerY < 0) {
+            
+        }
+
+        Debug.Log($"player Y = {PlayerY}");
 
         lastInputDir = InputDir;
     }
