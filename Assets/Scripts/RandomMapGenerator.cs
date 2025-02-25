@@ -18,9 +18,10 @@ public class RandomMapGenerator : MonoBehaviour
         Plat1.transform.parent = GameObject.Find("Grid").transform;
         //Instantiate(chunks[9], new Vector3(0, 0, 0), quaternion.identity);
 
-        var ChosenPiece = UnityEngine.Random.Range(0, 10);
+        //var ChosenPiece = UnityEngine.Random.Range(0, 10);
         for(int PlatGen = 0; PlatGen < 10; PlatGen++){
-            var NextPlats = Instantiate(chunks[PlatGen], new Vector3(Maplength, 0, 0), quaternion.identity);
+            var ChosenPiece = UnityEngine.Random.Range(0, 10);
+            var NextPlats = Instantiate(chunks[ChosenPiece], new Vector3(Maplength, 0, 0), quaternion.identity);
             NextPlats.transform.parent = GameObject.Find("Grid").transform;
             map = NextPlats.GetComponent<Tilemap>();
             Maplength += map.cellBounds.size.x;
