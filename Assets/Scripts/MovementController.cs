@@ -77,7 +77,7 @@ public class MovementController : MonoBehaviour{
             
         }
 
-        Debug.Log($"player Y = {PlayerY}");
+        // Debug.Log($"player Y = {PlayerY}");
 
         lastInputDir = InputDir;
     }
