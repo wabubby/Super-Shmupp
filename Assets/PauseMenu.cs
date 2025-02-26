@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUI; //refernece to the pause menu ui
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))   //game is already paused when pressing escape
         {
            if (GameIsPaused)
             {
@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour {
     void Pause ()
     {
         
-        pauseMenuUI.SetActive(true);
+        pauseMenuUI.SetActive(true); //bring up pause menu
         Time.timeScale = 0f;
         GameIsPaused = true;
         
@@ -43,8 +43,8 @@ public class PauseMenu : MonoBehaviour {
     {
         Time.timeScale = 1;
         
-        SceneManager.LoadScene("Ryan");
-        Debug.Log("Restarting Game....");
+        SceneManager.LoadScene("Full Game");
+        
 
     }
      
