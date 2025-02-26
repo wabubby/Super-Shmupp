@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = Game.instance.player;
+
+        transform.localScale = Vector3.one * (0.65f + health/4f);
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class Enemy : MonoBehaviour
             Vector3 newPosition = Vector3.MoveTowards(transform.position, player.position, speed*Time.deltaTime);
             transform.position = newPosition;
 
-            if (distanceToPlayer < transform.localScale.x) {
+            if (distanceToPlayer < transform.localScale.x/2) {
                 SceneManager.LoadScene("Full Game");
             }
 
@@ -39,6 +41,9 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         health -= 1;
+
+        transform.localScale = Vector3.one * (0.65f + health/4f);
+
         Destroy(col.gameObject);
     }
 }

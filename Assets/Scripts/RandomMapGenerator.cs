@@ -41,16 +41,8 @@ public class RandomMapGenerator : MonoBehaviour
             int ChosenPiece = UnityEngine.Random.Range(0, enemies.Length);
             var NextEnemy = Instantiate(enemies[ChosenPiece]);
 
-            NextEnemy.transform.position = new Vector3(x, UnityEngine.Random.Range(-5, 5), -1);
+            NextEnemy.transform.position = new Vector3(x, UnityEngine.Random.Range(0, 10), -1);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-        // var PlayerPosition = GameObject.
-        // if  = 
-    }
 }
